@@ -33,11 +33,11 @@ class _HomepageState extends State<Homepage> {
         ),
       ]),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(25.0),
-          child: Column(
-            children: [
-              Row(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
                 // greetings row
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 // ignore: prefer_const_literals_to_create_immutables
@@ -50,7 +50,7 @@ class _HomepageState extends State<Homepage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Hi, Lakshit',
+                        'Hi, Lakshit!!',
                         // ignore: prefer_const_constructors
                         style: TextStyle(
                           color: Colors.white,
@@ -78,37 +78,40 @@ class _HomepageState extends State<Homepage> {
                   )
                 ],
               ),
+            ),
 
-              SizedBox(
-                height: 20,
+            SizedBox(
+              height: 20,
+            ),
+            // search bar row
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue[800],
+                  borderRadius: BorderRadius.circular(12)),
+              padding: EdgeInsets.all(12),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.search,
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    'Search',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
               ),
-              // search bar row
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.blue[800],
-                    borderRadius: BorderRadius.circular(12)),
-                padding: EdgeInsets.all(12),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.search,
-                      color: Colors.white,
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(
-                      'Search',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
+            ),
+            SizedBox(
+              height: 25,
+            ),
 
-              Row(
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
@@ -126,88 +129,92 @@ class _HomepageState extends State<Homepage> {
                   )
                 ],
               ),
+            ),
 
-              SizedBox(
-                height: 25,
-              ),
+            SizedBox(
+              height: 25,
+            ),
 
-              // 4 diffrent faces
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  //bad
-                  Column(
-                    children: [
-                      EmoticonFace(
-                        emoticonFace: '😩',
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        'Bad',
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
-                  ),
-
-                  // fine
-                  Column(
-                    children: [
-                      EmoticonFace(
-                        emoticonFace: '🙂',
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        'Fine',
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
-                  ),
-
-                  // well
-                  Column(
-                    children: [
-                      EmoticonFace(
-                        emoticonFace: '😃',
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        'Well',
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
-                  ),
-
-                  //Excellent
-
-                  Column(
-                    children: [
-                      EmoticonFace(
-                        emoticonFace: '😊',
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        'Excellent',
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
-                  )
-                ],
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.white,
+            // 4 diffrent faces
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                //bad
+                Column(
+                  children: [
+                    EmoticonFace(
+                      emoticonFace: '😩',
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Bad',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
                 ),
-              )
-            ],
-          ),
+
+                // fine
+                Column(
+                  children: [
+                    EmoticonFace(
+                      emoticonFace: '🙂',
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Fine',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+
+                // well
+                Column(
+                  children: [
+                    EmoticonFace(
+                      emoticonFace: '😃',
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Well',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+
+                //Excellent
+
+                Column(
+                  children: [
+                    EmoticonFace(
+                      emoticonFace: '😊',
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Excellent',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                )
+              ],
+            ),
+            SizedBox(
+              height: 25,
+            ),
+
+            Expanded(
+              child: Container(
+                color: Colors.black26,
+              ),
+            )
+          ],
         ),
       ),
     );
