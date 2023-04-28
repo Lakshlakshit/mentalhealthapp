@@ -212,6 +212,22 @@ class _HomepageState extends State<Homepage> {
             Expanded(
               child: Container(
                 color: Colors.black26,
+                child: Center(
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Excersises',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ),
             )
           ],
