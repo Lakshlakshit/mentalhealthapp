@@ -28,7 +28,7 @@ class _HomepageState extends State<Homepage> {
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.info_outline_rounded),
           label: '',
         ),
       ]),
