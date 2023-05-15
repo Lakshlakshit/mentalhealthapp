@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
+import 'package:mentalhealthapp/pages/home_page.dart';
 import 'package:mentalhealthapp/pages/signup_page.dart';
 import 'package:mentalhealthapp/util/colors_utils.dart';
 
@@ -48,7 +49,10 @@ class _SignInScreenState extends State<SignInScreen> {
               SizedBox(
                 height: 10,
               ),
-              signInSignUpButton(context, true, () {}),
+              signInSignUpButton(context, true, () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Homepage()));
+              }),
               signUpOption()
             ],
           ),
